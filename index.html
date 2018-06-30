@@ -10,10 +10,8 @@
 <link rel="shortcut icon" type="image/x-icon" href="https://fatbo.wicp.io/img/ui/logo_c.png-icon32" />
 <link rel="apple-touch-icon" href="https://fatbo.wicp.io/img/ui/logo.png" />
 <link rel="stylesheet" href="https://fatbo.wicp.io/layui/css/layui.css">
+<link rel="stylesheet" href="https://fatbo.wicp.io/overhang/css/overhang.min.css">
 <!--图标及UI 结束-->
-<!--引入框架JS 开始-->
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-<!--引入框架JS 结束-->
 <style>
     html,body {
         left:16px;
@@ -45,123 +43,125 @@ var _hmt = _hmt || [];
 <!--百度统计代码 结束-->
 </head>
 <body>
-    <div class="layui-containe">
-        <div class="layui-row">
-            <h1> :)</h1>
-        </div>
-        <div class="layui-row">
-            <h2>欢迎使用C7Bell</h2>
-        </div>
-        <div class="layui-row">
-            <p><span id="clock">现在是  <span class="countnum" id="_h">--</span>:<span class="countnum" id="_m">--</span>:<span class="countnum" id="_s">--</span></span></p>
-        </div>
-        <div class="layui-row">
-            <blockquote class="layui-elem-quote">
-            <p>C7Bell介绍：</p>
-            <p>C7Bell可以根据本机时间，对照柳州市一中作息时间来播放上课铃、下课铃<!--，是一个在假期管理自己学习时间的好工具。--><br>PS：还支持提前两分钟播放预备铃哦</p>
-            </blockquote>
-        </div>
-        <div class="layui-row">
-            <table class="layui-table" style="text-align:center;">
-                <colgroup>
-                    <col width="150">
-                    <col width="auto">
-                </colgroup>
-                <thead id="l_thead">
-                        <tr>
-                            <th colspan="3" style="font-size:1.2em;">时间表</th>
-                        </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>早读</td>
-                        <td>07:30~07:45</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>07:50~08:30</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>08:40~09:20</td>
-                    </tr>
-                    <tr>
-                        <td>大课间(不响铃)</td>
-                        <td>09:25~09:40</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>09:50~10:30</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>10:40~11:20</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>11:30~12:10</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>14:50~15:30</td>
-                    </tr>
-                    <tr>
-                        <td>眼保健操(不响铃)</td>
-                        <td>15:30~15:40</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>15:45~16:25</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>16:35~17:15</td>
-                    </tr>
-                    <tr>
-                        <td>晚修1</td>
-                        <td>18:30~19:50</td>
-                    </tr>
-                    <tr>
-                        <td>晚修1(2)</td>
-                        <td>19:00~19:50</td>
-                    </tr>
-                    <tr>
-                        <td>晚修2</td>
-                        <td>20:00~20:50</td>
-                    </tr>
-                    <tr>
-                        <td>晚修3</td>
-                        <td>21:00~21:50</td>
-                    </tr>
-                    <tr>
-                        <td>晚修4</td>
-                        <td>22:00~22:30</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="layui-row">
-            <blockquote class="layui-elem-quote"><p>注意事项及常见问题:</p>
-            <ul>
-                <li>1.因程序采用JavaScript实现功能，因此请保持浏览器的运行，否则无法响铃</li>
-                <li>2.如果开着浏览器，也响了几次铃，但过一段时间后再也不会响铃，这是由于浏览器为了节能暂停了程序运行(现象是页面上的时钟停止了)，建议换一个浏览器</li>
-                <li>3.不要多开本页面，会导致重复响铃</li>
-            </ul>
-            </blockquote>
-        </div>
-        <div class="layui-row">
-            <blockquote class="layui-elem-quote layui-quote-nm">
-                <p>
-                    Version:1.0.180630<br>
-                    Author:<a href="https://github.com/GilbertPo/">GilbertPo</a>
-                </p>
-                <p>
-                    Copyright © 2018 C7Bell. Powered by <a href="https://www.github.com">GitHub</a>. Themes by <a href="http://www.layui.com">Layui</a>.
-                </p>
-             </blockquote>
-        </div>
+<div class="layui-containe">
+    <div class="layui-row">
+        <h1> :)</h1>
     </div>
-
+    <div class="layui-row">
+        <h2>欢迎使用C7Bell</h2>
+    </div>
+    <div class="layui-row">
+        <p><span id="clock">现在是  <span class="countnum" id="_h">--</span>:<span class="countnum" id="_m">--</span>:<span class="countnum" id="_s">--</span></span></p>
+    </div>
+    <div class="layui-row">
+        <blockquote class="layui-elem-quote">
+        <p>C7Bell介绍：</p>
+        <p>C7Bell可以根据本机时间，对照柳州市一中作息时间来播放上课铃、下课铃<!--，是一个在假期管理自己学习时间的好工具。--><br>PS：还支持提前两分钟播放预备铃哦</p>
+        </blockquote>
+    </div>
+    <div class="layui-row">
+        <table class="layui-table" style="text-align:center;">
+            <colgroup>
+                <col width="150">
+                <col width="auto">
+            </colgroup>
+            <thead id="l_thead">
+                    <tr>
+                        <th colspan="3" style="font-size:1.2em;">时间表</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>早读</td>
+                    <td>07:30~07:45</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>07:50~08:30</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>08:40~09:20</td>
+                </tr>
+                <tr>
+                    <td>大课间(不响铃)</td>
+                    <td>09:25~09:40</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>09:50~10:30</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>10:40~11:20</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>11:30~12:10</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>14:50~15:30</td>
+                </tr>
+                <tr>
+                    <td>眼保健操(不响铃)</td>
+                    <td>15:30~15:40</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>15:45~16:25</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>16:35~17:15</td>
+                </tr>
+                <tr>
+                    <td>晚修1</td>
+                    <td>18:30~19:50</td>
+                </tr>
+                <tr>
+                    <td>晚修1(2)</td>
+                    <td>19:00~19:50</td>
+                </tr>
+                <tr>
+                    <td>晚修2</td>
+                    <td>20:00~20:50</td>
+                </tr>
+                <tr>
+                    <td>晚修3</td>
+                    <td>21:00~21:50</td>
+                </tr>
+                <tr>
+                    <td>晚修4</td>
+                    <td>22:00~22:30</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="layui-row">
+        <blockquote class="layui-elem-quote"><p>注意事项及常见问题:</p>
+        <ul>
+            <li>1.因程序采用JavaScript实现功能，因此请保持浏览器的运行，否则无法响铃</li>
+            <li>2.如果开着浏览器，也响了几次铃，但过一段时间后再也不会响铃，这是由于浏览器为了节能暂停了程序运行(现象是页面上的时钟停止了)，建议换一个浏览器</li>
+            <li>3.不要多开本页面，会导致重复响铃</li>
+        </ul>
+        </blockquote>
+    </div>
+    <div class="layui-row">
+        <blockquote class="layui-elem-quote layui-quote-nm">
+            <p>
+                Version:1.0.180630<br>
+                Author:<a href="https://github.com/GilbertPo/">GilbertPo</a>
+            </p>
+            <p>
+                Copyright © 2018 C7Bell. Powered by <a href="https://www.github.com">GitHub</a>. Themes by <a href="http://www.layui.com">Layui</a>.
+            </p>
+         </blockquote>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://fatbo.wicp.io/overhang/js/jquery-ui.min.js"></script>
+<script src="https://fatbo.wicp.io/overhang/js/overhang.min.js"></script>
 <script type="text/javascript">
     
     function countTime() {  
@@ -314,8 +314,16 @@ var _hmt = _hmt || [];
         var downring = "https://wavelet.wicp.net/o_1ch7ons1v1vvs1pbf1ttf14p81dfpa.mp3";//下课铃
         if(type=="up" || type=="readyup"){
             if(type=="readyup"){
+                $('body').overhang({
+			        type: 'warn',
+			        message: '预备铃已响起。'
+		        });
                 document.title ="【预备铃】C7Bell";
             }else{
+                $('body').overhang({
+			        type: 'info',
+			        message: '上课铃已响起。'
+		        });
                 document.title ="【上课铃】C7Bell";
             }
             var audio = new Audio(upring);
@@ -326,6 +334,10 @@ var _hmt = _hmt || [];
             },30000);
             
         }else{
+            $('body').overhang({
+		        type: 'success',
+		        message: '下课铃已响起。'
+		    });
             document.title ="【下课铃】C7Bell";
             var audio = new Audio(downring);
             audio.play();
@@ -337,7 +349,6 @@ var _hmt = _hmt || [];
     }
     countTime();
     document.title ="【等待响铃】C7Bell";
-    
 </script>
 </body>
 </html>
