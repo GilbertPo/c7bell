@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>C7Ringtone</title>
+<!--图标及UI 开始-->
+<link rel="shortcut icon" type="image/x-icon" href="https://fatbo.wicp.io/img/ui/logo_c.png-icon32" />
+<link rel="apple-touch-icon" href="https://fatbo.wicp.io/img/ui/logo.png" />
+<link rel="stylesheet" href="https://fatbo.wicp.io/layui/css/layui.css">
+<!--图标及UI 结束-->
+<!--百度统计代码 开始-->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?640363e0a9e347bbd115ba3e960dab98";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<!--百度统计代码 结束-->
+<!--引入框架JS 开始-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<!--引入框架JS 结束-->
+<style>
+    html,body {
+        left:16px;
+        top:16px;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    #clock {
+        font-size:1.5rem;
+    }
+    .countnum {
+        color:#01AAED;
+    }
+</style>
+</head>
+
+<body>
+    <div class="layui-containe" class="layui-bg-gray">
+        <div class="layui-row">
+            <p>
+                <h1>
+                    :)
+                </h1>
+            </p>
+        </div>
+        <div class="layui-row">
+            <p>
+                <h2>
+                    欢迎使用C7Ringtone
+                </h2>
+            </p>
+        </div>
+        <div class="layui-row">
+            <p>
+                <span id="clock">现在是  
+                    <span class="countnum" id="_h">--</span>:<span class="countnum" id="_m">--</span>:<span class="countnum" id="_s">--</span></span>
+                </span>
+            </p>
+        </div>
+        <div class="layui-row">
+            <blockquote class="layui-elem-quote">
+            <p>
+                C7Ringtone介绍：
+            </p>
+            <p>C7Ringtone可以根据本机时间，对照柳州市一中作息时间来播放上课铃、下课铃<!--，是一个在假期管理自己学习时间的好工具。--><br>PS：还支持提前两分钟播放预备铃哦</p>
+            </blockquote>
+        </div>
+        <div class="layui-row">
+            <table class="layui-table" style="text-align:center;">
+                <colgroup>
+                    <col width="150">
+                    <col width="auto">
+                </colgroup>
+                <thead id="l_thead">
+                        <tr>
+                            <th colspan="3" style="font-size:1.2em;">时间表</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>早读</td>
+                        <td>07:30~07:45</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>07:50~08:30</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>08:40~09:20</td>
+                    </tr>
+                    <tr>
+                        <td>大课间(不响铃)</td>
+                        <td>09:25~09:40</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>09:50~10:30</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>10:40~11:20</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>11:30~12:10</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>14:50~15:30</td>
+                    </tr>
+                    <tr>
+                        <td>眼保健操(不响铃)</td>
+                        <td>15:30~15:40</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>15:45~16:25</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>16:35~17:15</td>
+                    </tr>
+                    <tr>
+                        <td>晚修1</td>
+                        <td>18:30~19:50</td>
+                    </tr>
+                    <tr>
+                        <td>晚修1(2)</td>
+                        <td>19:00~19:50</td>
+                    </tr>
+                    <tr>
+                        <td>晚修2</td>
+                        <td>20:00~20:50</td>
+                    </tr>
+                    <tr>
+                        <td>晚修3</td>
+                        <td>21:00~21:50</td>
+                    </tr>
+                    <tr>
+                        <td>晚修4</td>
+                        <td>22:00~22:30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="layui-row">
+            <blockquote class="layui-elem-quote"><p>注意事项及常见问题:</p>
+            <ul>
+                <li>1.因程序采用JavaScript实现功能，因此请保持浏览器的运行，否则无法响铃</li>
+                <li>2.如果开着浏览器，也响了几次铃，但过一段时间后再也不会响铃，这是由于浏览器为了节能暂停了程序运行(现象是页面上的时钟停止了)，建议换一个浏览器</li>
+                <li>3.不要多开本页面，会导致重复响铃</li>
+            </ul>
+            </blockquote>
+        </div>
+        <div class="layui-row">
+        © 2018 C7课表
+        </div>
+    </div>
+
+<script type="text/javascript">
+    
+    function countTime() {  
+        //获取当前时间  
+        var date = new Date();  
+        var hours = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        
+        //输出时间
+        if(hours<10){
+            document.getElementById("_h").innerHTML = "0"+hours;
+        }else{
+            document.getElementById("_h").innerHTML = hours;
+        }
+        
+        if(min<10){
+            document.getElementById("_m").innerHTML = "0"+min;
+        }else{
+            document.getElementById("_m").innerHTML = min;
+        }
+        
+        if(sec<10){
+            document.getElementById("_s").innerHTML = "0"+sec;
+        }else{
+            document.getElementById("_s").innerHTML = sec;
+        }
+        
+        //判断并响铃
+        if(sec==0){
+            if(hours==7){
+                if(min==28){
+                    ringing("readyup");
+                }else if(min==30){
+                    ringing("up");
+                }else if(min==45){
+                    ringing("down");
+                }
+            }else if(hours==8){
+                if(min==30){
+                    ringing("down");
+                }else if(min==38){
+                    ringing("readyup");
+                }else if(min==40){
+                    ringing("up");
+                }
+            }else if(hours==9){
+                if(min==20){
+                    ringing("down");
+                }else if(min==48){
+                    ringing("readyup");
+                }else if(min==50){
+                    ringing("up");
+                }
+            }else if(hours==10){
+                if(min==30){
+                    ringing("down");
+                }else if(min==38){
+                    ringing("readyup");
+                }else if(min==40){
+                    ringing("up");
+                }
+            }else if(hours==11){
+                if(min==20){
+                    ringing("down");
+                }else if(min==28){
+                    ringing("readyup");
+                }else if(min==30){
+                    ringing("up");
+                }
+            }else if(hours==12){
+                if(min==10){
+                    ringing("down");
+                }
+            }else if(hours==14){
+                if(min==48){
+                    ringing("readyup");
+                }else if(min==50){
+                    ringing("up");
+                }
+            }else if(hours==15){
+                if(min==30){
+                    ringing("down");
+                }else if(min==43){
+                    ringing("readyup");
+                }else if(min==45){
+                    ringing("up");
+                }
+            }else if(hours==16){
+                if(min==25){
+                    ringing("down");
+                }else if(min==33){
+                    ringing("readyup");
+                }else if(min==35){
+                    ringing("up");
+                }
+            }else if(hours==17){
+                if(min==15){
+                    ringing("down");
+                }
+            }else if(hours==18){
+                if(min==28){
+                    ringing("readyup");
+                }else if(min==30){
+                    ringing("up");
+                }else if(min==58){
+                    ringing("up");
+                }
+            }else if(hours==19){
+                if(min==00){
+                    ringing("up");
+                }else if(min==50){
+                    ringing("down");
+                }else if(min==58){
+                    ringing("readyup");
+                }
+            }else if(hours==20){
+                if(min==00){
+                    ringing("up");
+                }else if(min==50){
+                    ringing("down");
+                }else if(min==58){
+                    ringing("readyup");
+                }
+            }else if(hours==21){
+                if(min==00){
+                    ringing("up");
+                }else if(min==50){
+                    ringing("down");
+                }else if(min==58){
+                    ringing("readyup");
+                }
+            }else if(hours==22){
+                if(min==00){
+                    ringing("up");
+                }else if(min==30){
+                    ringing("down");
+                }
+            }
+        }
+        //递归每秒调用countTime方法，显示动态时间效果
+        setTimeout(countTime,1000);
+    }
+    function ringing(type){
+        var upring = "https://wavelet.wicp.net/o_1ch7ol1dn1vso897foqljsk3a.mp3";//上课铃和预备铃
+        var downring = "https://wavelet.wicp.net/o_1ch7ons1v1vvs1pbf1ttf14p81dfpa.mp3";//下课铃
+        if(type=="up" || type=="readyup"){
+            if(type=="readyup"){
+                document.title ="【预备铃】C7Ringtone";
+            }else{
+                document.title ="【上课铃】C7Ringtone";
+            }
+            var audio = new Audio(upring);
+            audio.play();
+            setTimeout(function(){
+                document.title ="【等待响铃】C7Ringtone";
+                delete audio;//销毁对象
+            },30000);
+            
+        }else{
+            document.title ="【下课铃】C7Ringtone";
+            var audio = new Audio(downring);
+            audio.play();
+            setTimeout(function(){
+                document.title ="【等待响铃】C7Ringtone";
+                delete audio;//销毁对象
+            },30000);
+        }
+    }
+    countTime();
+    document.title ="【等待响铃】C7Ringtone";
+    
+</script>
+</body>
+</html>
