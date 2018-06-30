@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>C7Ringtone</title>
+<title>C7Bell</title>
 <!--图标及UI 开始-->
 <link rel="shortcut icon" type="image/x-icon" href="https://fatbo.wicp.io/img/ui/logo_c.png-icon32" />
 <link rel="apple-touch-icon" href="https://fatbo.wicp.io/img/ui/logo.png" />
@@ -57,7 +57,7 @@
         <div class="layui-row">
             <p>
                 <h2>
-                    欢迎使用C7Ringtone
+                    欢迎使用C7Bell
                 </h2>
             </p>
         </div>
@@ -71,9 +71,9 @@
         <div class="layui-row">
             <blockquote class="layui-elem-quote">
             <p>
-                C7Ringtone介绍：
+                C7Bell介绍：
             </p>
-            <p>C7Ringtone可以根据本机时间，对照柳州市一中作息时间来播放上课铃、下课铃<!--，是一个在假期管理自己学习时间的好工具。--><br>PS：还支持提前两分钟播放预备铃哦</p>
+            <p>C7Bell可以根据本机时间，对照柳州市一中作息时间来播放上课铃、下课铃<!--，是一个在假期管理自己学习时间的好工具。--><br>PS：还支持提前两分钟播放预备铃哦</p>
             </blockquote>
         </div>
         <div class="layui-row">
@@ -171,7 +171,7 @@
                     Author:<a href="https://github.com/GilbertPo/">GilbertPo</a>
                 </p>
                 <p>
-                    Copyright © 2018 C7Ringtone. Powered by <a href="https://www.github.com">GitHub</a>. Themes by <a href="http://www.layui.com">Layui</a>.
+                    Copyright © 2018 C7Bell. Powered by <a href="https://www.github.com">GitHub</a>. Themes by <a href="http://www.layui.com">Layui</a>.
                 </p>
              </blockquote>
         </div>
@@ -325,29 +325,29 @@
         var downring = "https://wavelet.wicp.net/o_1ch7ons1v1vvs1pbf1ttf14p81dfpa.mp3";//下课铃
         if(type=="up" || type=="readyup"){
             if(type=="readyup"){
-                document.title ="【预备铃】C7Ringtone";
+                document.title ="【预备铃】C7Bell";
             }else{
-                document.title ="【上课铃】C7Ringtone";
+                document.title ="【上课铃】C7Bell";
             }
             var audio = new Audio(upring);
             audio.play();
             setTimeout(function(){
-                document.title ="【等待响铃】C7Ringtone";
+                document.title ="【等待响铃】C7Bell";
                 delete audio;//销毁对象
             },30000);
             
         }else{
-            document.title ="【下课铃】C7Ringtone";
+            document.title ="【下课铃】C7Bell";
             var audio = new Audio(downring);
             audio.play();
             setTimeout(function(){
-                document.title ="【等待响铃】C7Ringtone";
+                document.title ="【等待响铃】C7Bell";
                 delete audio;//销毁对象
             },30000);
         }
     }
     countTime();
-    document.title ="【等待响铃】C7Ringtone";
+    document.title ="【等待响铃】C7Bell";
     
 </script>
 </body>
