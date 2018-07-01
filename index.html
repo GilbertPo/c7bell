@@ -45,9 +45,22 @@ h2 {
     text-align:center;
     position:fixed;
 }
+.footer {
+    bottom:0px;
+    width:100%;
+    height:32px;
+    position:fixed;
+    text-align:center;
+    color:#FFFFFF;
+    z-index:10;
+}
 body .layui-nav-bg-clean{
     background-color: rgba(0,0,0,0);
 }
+body a:link    {color:#009688;}
+body a:visited {color:#009688;}
+body a:hover   {color:#009688;}
+body a:active  {color:#009688;}
 </style>
 <!--百度统计代码 开始-->
 <script>
@@ -89,6 +102,9 @@ var _hmt = _hmt || [];
             </p>
         </div>
     </div>
+    <div class="footer">
+    Copyright © 2018 C7Bell. Powered by <a href="https://www.github.com">GitHub</a>. Themes by <a href="http://www.layui.com">Layui</a> & <a href="https://paulkr.github.io/overHang.js/">OverHang.js</a>.
+</div>
 </div>
 <div class="layui-containe" style="padding: 15px;display: none;" id="page_time">
     <div class="layui-row">
@@ -191,19 +207,26 @@ var _hmt = _hmt || [];
             <h1 style="color:#009688">C7 Bell</h1>
             <div class="layui-row">
                 <blockquote class="layui-elem-quote">
-                <p>C7Bell介绍：</p>
+                <p>C7Bell介绍:</p>
                 <p>C7Bell是一款可以根据本机时间并对照柳州市一中作息时间来播放上课铃、下课铃的网页程序<!--，还是一个在假期管理自己学习时间的好工具。-->
                     <br>PS：还支持提前两分钟播放预备铃哦
                 </p>
                 </blockquote>
             </div>
             <div class="layui-row">
-                <blockquote class="layui-elem-quote"><p>注意事项及常见问题:</p>
+                <blockquote class="layui-elem-quote layui-quote-nm"><p>注意事项及常见问题:</p>
                 <ul>
                     <li>1.因程序采用JavaScript实现功能，因此请保持浏览器的运行，否则无法响铃</li>
                     <li>2.如果开着浏览器，也响了几次铃，但过一段时间后再也不会响铃，这是由于浏览器为了节能暂停了程序运行(现象是页面上的时钟停止了)，建议换一个浏览器</li>
                     <li>3.不要多开本页面，会导致重复响铃</li>
                 </ul>
+                </blockquote>
+            </div>
+            <div class="layui-row">
+                <blockquote class="layui-elem-quote">
+                <p>铃声试听:</p>
+                <p><button class="layui-btn" onclick="ringing('readyup');">预备铃</button>&nbsp;<button class="layui-btn layui-btn-primary" onclick="ringing('up');">上课铃</button>&nbsp;<button class="layui-btn" onclick="ringing('down');">下课铃</button>
+                </p>
                 </blockquote>
             </div>
             <div class="layui-row">
@@ -226,6 +249,6 @@ var _hmt = _hmt || [];
 <script src="https://fatbo.wicp.io/overhang/js/jquery-ui.min.js"></script>
 <script src="https://fatbo.wicp.io/overhang/js/overhang.min.js"></script>
 <script src="js/main.min.js"></script>
-<script src="js/ui.min.js"></script>
+<script src="js/ui.js"></script>
 </body>
 </html>
