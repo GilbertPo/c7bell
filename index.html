@@ -6,31 +6,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>C7Bell</title>
-<!--图标及UI 开始-->
 <link rel="shortcut icon" type="image/x-icon" href="https://fatbo.wicp.io/img/ui/logo_c.png-icon32" />
 <link rel="apple-touch-icon" href="https://fatbo.wicp.io/img/ui/logo.png" />
 <link rel="stylesheet" href="https://fatbo.wicp.io/layui/css/layui.css">
 <link rel="stylesheet" href="https://fatbo.wicp.io/overhang/css/overhang.min.css">
-<!--图标及UI 结束-->
 <style>
-    html,body {
-        left:16px;
-        top:16px;
-    }
-    h1 {
-        font-size: 5rem;
-    }
-    h2 {
-        font-size: 3rem;
-    }
-    #clock {
-        font-size:1.5rem;
-    }
-    .countnum {
-        color:#01AAED;
-    }
+body {
+    background-color:#000;
+}
+h1 {
+    color:#FFF;
+    font-size: 5rem;
+}
+h2 {
+    color:#FFF;
+    font-size: 3rem;
+}
+#clock {
+    color:#FFF;
+    font-size:1.5rem;
+}
+.countnum {
+    color:#5FB878;
+}
+#bgdiv {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:-10;
+    background:url(https://wavelet.wicp.net/o_1chaqjna71r2135er2qs97q6ea.png) fixed center center no-repeat;
+    background-size: cover;
+}
+#home_title {
+    text-align:center;
+    position:fixed;
+}
+body .layui-nav-bg-clean{
+    background-color: rgba(0,0,0,0);
+}
 </style>
-<!--百度统计代码 开始-->
+<!--Baidu Tongji-->
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -40,25 +57,36 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<!--百度统计代码 结束-->
+<!--Baidu Tongji-->
 </head>
 <body>
-<div class="layui-containe">
-    <div class="layui-row">
-        <h1> :)</h1>
+<div id="bgdiv"></div>
+<div class="layui-header">
+    <ul class="layui-nav layui-nav-bg-clean">
+        <li class="layui-nav-item layui-this" id="li_home"><a id="link_home">主页面</a></li>
+        <li class="layui-nav-item" id="li_time"><a id="link_time">时间表</a></li>
+        <li class="layui-nav-item" id="li_history"><a id="link_history">响铃记录</a></li>
+        <li class="layui-nav-item" id="li_about"><a id="link_about">关于</a></li>
+    </ul>
+</div>
+<div class="layui-containe" style="padding: 15px;" id="page_home">
+    <div style="" id="home_title">
+        <div class="layui-row">
+            <h1>&nbsp;:)</h1>
+        </div>
+        <div class="layui-row">
+            <h2>&nbsp;欢迎使用C7Bell</h2>
+        </div>
+        <div class="layui-row">
+            <p>
+                <span id="clock">
+                    &nbsp;&nbsp;现在是&nbsp;&nbsp;<span class="countnum" id="_h">--</span>:<span class="countnum" id="_m">--</span>:<span class="countnum" id="_s">--</span>
+                </span>
+            </p>
+        </div>
     </div>
-    <div class="layui-row">
-        <h2>欢迎使用C7Bell</h2>
-    </div>
-    <div class="layui-row">
-        <p><span id="clock">现在是  <span class="countnum" id="_h">--</span>:<span class="countnum" id="_m">--</span>:<span class="countnum" id="_s">--</span></span></p>
-    </div>
-    <div class="layui-row">
-        <blockquote class="layui-elem-quote">
-        <p>C7Bell介绍：</p>
-        <p>C7Bell可以根据本机时间，对照柳州市一中作息时间来播放上课铃、下课铃<!--，是一个在假期管理自己学习时间的好工具。--><br>PS：还支持提前两分钟播放预备铃哦</p>
-        </blockquote>
-    </div>
+</div>
+<div class="layui-containe" style="padding: 15px;display: none;" id="page_time">
     <div class="layui-row">
         <table class="layui-table" style="text-align:center;">
             <colgroup>
@@ -138,217 +166,62 @@ var _hmt = _hmt || [];
             </tbody>
         </table>
     </div>
+</div>
+<div class="layui-containe" style="padding: 15px;display: none;" id="page_history">
     <div class="layui-row">
-        <blockquote class="layui-elem-quote"><p>注意事项及常见问题:</p>
-        <ul>
-            <li>1.因程序采用JavaScript实现功能，因此请保持浏览器的运行，否则无法响铃</li>
-            <li>2.如果开着浏览器，也响了几次铃，但过一段时间后再也不会响铃，这是由于浏览器为了节能暂停了程序运行(现象是页面上的时钟停止了)，建议换一个浏览器</li>
-            <li>3.不要多开本页面，会导致重复响铃</li>
-        </ul>
-        </blockquote>
+        <fieldset class="layui-elem-field layui-field-title">
+        <legend>响铃记录</legend>
+        </fieldset>
     </div>
+    <div class="layui-row" id="history_not">暂无响铃记录</div>
     <div class="layui-row">
-        <blockquote class="layui-elem-quote layui-quote-nm">
-            <p>
-                Version:1.0.180630<br>
-                Author:<a href="https://github.com/GilbertPo/">GilbertPo</a>
-            </p>
-            <p>
-                Copyright © 2018 C7Bell. Powered by <a href="https://www.github.com">GitHub</a>. Themes by <a href="http://www.layui.com">Layui</a>.
-            </p>
-         </blockquote>
+        <ul class="layui-timeline">
+        </ul>
     </div>
 </div>
+<div class="layui-containe" style="padding: 15px;display: none;" id="page_about">
+    <div class="layui-row">
+        <fieldset class="layui-elem-field layui-field-title">
+        <legend>关于</legend>
+        <div class="layui-field-box">
+            <h1 style="color:#009688">C7 Bell</h1>
+            <div class="layui-row">
+                <blockquote class="layui-elem-quote">
+                <p>C7Bell介绍：</p>
+                <p>C7Bell是一款可以根据本机时间并对照柳州市一中作息时间来播放上课铃、下课铃的网页程序<!--，还是一个在假期管理自己学习时间的好工具。-->
+                    <br>PS：还支持提前两分钟播放预备铃哦
+                </p>
+                </blockquote>
+            </div>
+            <div class="layui-row">
+                <blockquote class="layui-elem-quote"><p>注意事项及常见问题:</p>
+                <ul>
+                    <li>1.因程序采用JavaScript实现功能，因此请保持浏览器的运行，否则无法响铃</li>
+                    <li>2.如果开着浏览器，也响了几次铃，但过一段时间后再也不会响铃，这是由于浏览器为了节能暂停了程序运行(现象是页面上的时钟停止了)，建议换一个浏览器</li>
+                    <li>3.不要多开本页面，会导致重复响铃</li>
+                </ul>
+                </blockquote>
+            </div>
+            <div class="layui-row">
+                <blockquote class="layui-elem-quote layui-quote-nm">
+                    <p>
+                        Version:1.1.180701<br>
+                        Author:<a href="https://github.com/GilbertPo/">GilbertPo</a>
+                    </p>
+                    <p>
+                        Copyright © 2018 C7Bell. Powered by <a href="https://www.github.com">GitHub</a>. Themes by <a href="http://www.layui.com">Layui</a> & <a href="https://paulkr.github.io/overHang.js/">OverHang.js</a>.
+                    </p>
+                 </blockquote>
+            </div>
+        </div>
+        </fieldset>
+    </div>
+</div>
+<script src="https://fatbo.wicp.io/layui/layui.js"></script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://fatbo.wicp.io/overhang/js/jquery-ui.min.js"></script>
 <script src="https://fatbo.wicp.io/overhang/js/overhang.min.js"></script>
-<script type="text/javascript">
-    
-    function countTime() {  
-        //获取当前时间  
-        var date = new Date();  
-        var hours = date.getHours();
-        var min = date.getMinutes();
-        var sec = date.getSeconds();
-        
-        //输出时间
-        if(hours<10){
-            document.getElementById("_h").innerHTML = "0"+hours;
-        }else{
-            document.getElementById("_h").innerHTML = hours;
-        }
-        
-        if(min<10){
-            document.getElementById("_m").innerHTML = "0"+min;
-        }else{
-            document.getElementById("_m").innerHTML = min;
-        }
-        
-        if(sec<10){
-            document.getElementById("_s").innerHTML = "0"+sec;
-        }else{
-            document.getElementById("_s").innerHTML = sec;
-        }
-        
-        //判断并响铃
-        if(sec==0){
-            if(hours==7){
-                if(min==28){
-                    ringing("readyup");
-                }else if(min==30){
-                    ringing("up");
-                }else if(min==45){
-                    ringing("down");
-                }else if(min==48){
-                    ringing("readyup");
-                }else if(min==50){
-                    ringing("up");
-                }
-            }else if(hours==8){
-                if(min==30){
-                    ringing("down");
-                }else if(min==38){
-                    ringing("readyup");
-                }else if(min==40){
-                    ringing("up");
-                }
-            }else if(hours==9){
-                if(min==20){
-                    ringing("down");
-                }else if(min==48){
-                    ringing("readyup");
-                }else if(min==50){
-                    ringing("up");
-                }
-            }else if(hours==10){
-                if(min==30){
-                    ringing("down");
-                }else if(min==38){
-                    ringing("readyup");
-                }else if(min==40){
-                    ringing("up");
-                }
-            }else if(hours==11){
-                if(min==20){
-                    ringing("down");
-                }else if(min==28){
-                    ringing("readyup");
-                }else if(min==30){
-                    ringing("up");
-                }
-            }else if(hours==12){
-                if(min==10){
-                    ringing("down");
-                }
-            }else if(hours==14){
-                if(min==48){
-                    ringing("readyup");
-                }else if(min==50){
-                    ringing("up");
-                }
-            }else if(hours==15){
-                if(min==30){
-                    ringing("down");
-                }else if(min==43){
-                    ringing("readyup");
-                }else if(min==45){
-                    ringing("up");
-                }
-            }else if(hours==16){
-                if(min==25){
-                    ringing("down");
-                }else if(min==33){
-                    ringing("readyup");
-                }else if(min==35){
-                    ringing("up");
-                }
-            }else if(hours==17){
-                if(min==15){
-                    ringing("down");
-                }
-            }else if(hours==18){
-                if(min==28){
-                    ringing("readyup");
-                }else if(min==30){
-                    ringing("up");
-                }else if(min==58){
-                    ringing("up");
-                }
-            }else if(hours==19){
-                if(min==00){
-                    ringing("up");
-                }else if(min==50){
-                    ringing("down");
-                }else if(min==58){
-                    ringing("readyup");
-                }
-            }else if(hours==20){
-                if(min==00){
-                    ringing("up");
-                }else if(min==50){
-                    ringing("down");
-                }else if(min==58){
-                    ringing("readyup");
-                }
-            }else if(hours==21){
-                if(min==00){
-                    ringing("up");
-                }else if(min==50){
-                    ringing("down");
-                }else if(min==58){
-                    ringing("readyup");
-                }
-            }else if(hours==22){
-                if(min==00){
-                    ringing("up");
-                }else if(min==30){
-                    ringing("down");
-                }
-            }
-        }
-        //递归每秒调用countTime方法，显示动态时间效果
-        setTimeout(countTime,1000);
-    }
-    function ringing(type){
-        var upring = "https://wavelet.wicp.net/o_1ch7ol1dn1vso897foqljsk3a.mp3";//上课铃和预备铃
-        var downring = "https://wavelet.wicp.net/o_1ch7ons1v1vvs1pbf1ttf14p81dfpa.mp3";//下课铃
-        if(type=="up" || type=="readyup"){
-            if(type=="readyup"){
-                $('body').overhang({
-			        type: 'warn',
-			        message: '预备铃已响起。'
-		        });
-                document.title ="【预备铃】C7Bell";
-            }else{
-                $('body').overhang({
-			        type: 'info',
-			        message: '上课铃已响起。'
-		        });
-                document.title ="【上课铃】C7Bell";
-            }
-            var audio = new Audio(upring);
-            audio.play();
-            setTimeout(function(){
-                document.title ="【等待响铃】C7Bell";
-                delete audio;//销毁对象
-            },30000);
-            
-        }else{
-            $('body').overhang({
-		        type: 'success',
-		        message: '下课铃已响起。'
-		    });
-            document.title ="【下课铃】C7Bell";
-            var audio = new Audio(downring);
-            audio.play();
-            setTimeout(function(){
-                document.title ="【等待响铃】C7Bell";
-                delete audio;//销毁对象
-            },30000);
-        }
-    }
-    countTime();
-    document.title ="【等待响铃】C7Bell";
-</script>
+<script src="js/main.js"></script>
+<script src="js/ui.js"></script>
 </body>
 </html>
