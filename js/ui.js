@@ -13,6 +13,9 @@ layui.use(['layer','element'],function(){
                 $("#bgdiv").fadeIn("slow");
                 $(".layui-nav").removeClass("layui-bg-black");
                 $(".layui-nav").addClass("layui-bg-clean");
+                $("#li_more").removeClass("layui-this");
+                $("#li_about").removeClass("layui-this");
+                $("#li_home").addClass("layui-this");
                 $("body").css("background-color","#000000");
                 $("#page_time").hide("slow");
                 $("#page_history").hide("slow");
@@ -24,6 +27,9 @@ layui.use(['layer','element'],function(){
                 $("#bgdiv").fadeOut("slow");
                 $(".layui-nav").addClass("layui-bg-black");
                 $(".layui-nav").removeClass("layui-bg-clean");
+                $("#li_home").removeClass("layui-this");
+                $("#li_about").removeClass("layui-this");
+                $("#li_more").addClass("layui-this");
                 $("body").css("background-color","#FFFFFF");
                 $("#page_home").hide("slow");
                 $("#page_history").hide("slow");
@@ -35,6 +41,9 @@ layui.use(['layer','element'],function(){
                 $("#bgdiv").fadeOut("slow");
                 $(".layui-nav").addClass("layui-bg-black");
                 $(".layui-nav").removeClass("layui-bg-clean");
+                $("#li_home").removeClass("layui-this");
+                $("#li_about").removeClass("layui-this");
+                $("#li_more").addClass("layui-this");
                 $("body").css("background-color","#FFFFFF");
                 $("#page_home").hide("slow");
                 $("#page_time").hide("slow");
@@ -46,6 +55,9 @@ layui.use(['layer','element'],function(){
                 $("#bgdiv").fadeOut("slow");
                 $(".layui-nav").addClass("layui-bg-black");
                 $(".layui-nav").removeClass("layui-bg-clean");
+                $("#li_home").removeClass("layui-this");
+                $("#li_more").removeClass("layui-this");
+                $("#li_about").addClass("layui-this");
                 $("body").css("background-color","#FFFFFF");
                 $("#page_home").hide("slow");
                 $("#page_time").hide("slow");
