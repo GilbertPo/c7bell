@@ -10,7 +10,7 @@ layui.use(['layer','element'],function(){
         });
         $("#link_home").click(function(){
             layer.msg($("#link_home").text());
-            $("#bgdiv").fadeIn("slow");
+            $("#bgdiv").fadeIn();
             $(".layui-nav").removeClass("layui-bg-black");
             $(".layui-nav").addClass("layui-bg-clean");
             $(".layui-header").removeClass("layui-bg-black");
@@ -18,17 +18,17 @@ layui.use(['layer','element'],function(){
             $("#li_more").removeClass("layui-this");
             $("#li_about").removeClass("layui-this");
             $("#li_home").addClass("layui-this");
-            $("#page_time").hide("slow");
-            $("#page_history").hide("slow");
-            $("#page_about").hide("slow");
-            $("#page_home").show("slow");
+            $("#page_time").hide();
+            $("#page_history").hide();
+            $("#page_about").hide();
+            $("#page_home").show();
             $("#home_title").css("top",($(window).height()-$("#home_title").height())/2);
             $("#home_title").css("left",($(window).width()-$("#home_title").width())/2);
             $("body").css("background-color","#000000");
         });
         $("#link_time").click(function(){
             layer.msg($("#link_time").text());
-            $("#bgdiv").fadeOut("slow");
+            $("#bgdiv").fadeOut();
             $(".layui-nav").addClass("layui-bg-black");
             $(".layui-nav").removeClass("layui-bg-clean");
             $(".layui-header").addClass("layui-bg-black");
@@ -36,15 +36,15 @@ layui.use(['layer','element'],function(){
             $("#li_home").removeClass("layui-this");
             $("#li_about").removeClass("layui-this");
             $("#li_more").addClass("layui-this");
-            $("#page_home").hide("slow");
-            $("#page_history").hide("slow");
-            $("#page_about").hide("slow");
-            $("#page_time").show("slow");
+            $("#page_home").hide();
+            $("#page_history").hide();
+            $("#page_about").hide();
+            $("#page_time").show();
             $("body").css("background-color","#FFFFFF");
         });
         $("#link_history").click(function(){
             layer.msg($("#link_history").text());
-            $("#bgdiv").fadeOut("slow");
+            $("#bgdiv").fadeOut();
             $(".layui-nav").addClass("layui-bg-black");
             $(".layui-nav").removeClass("layui-bg-clean");
             $(".layui-header").addClass("layui-bg-black");
@@ -52,15 +52,15 @@ layui.use(['layer','element'],function(){
             $("#li_home").removeClass("layui-this");
             $("#li_about").removeClass("layui-this");
             $("#li_more").addClass("layui-this");
-            $("#page_home").hide("slow");
-            $("#page_time").hide("slow");
-            $("#page_about").hide("slow");
-            $("#page_history").show("slow");
+            $("#page_home").hide();
+            $("#page_time").hide();
+            $("#page_about").hide();
+            $("#page_history").show();
             $("body").css("background-color","#FFFFFF");
         });
         $("#link_about").click(function(){
             layer.msg($("#link_about").text());
-            $("#bgdiv").fadeOut("slow");
+            $("#bgdiv").fadeOut();
             $(".layui-nav").addClass("layui-bg-black");
             $(".layui-nav").removeClass("layui-bg-clean");
             $(".layui-header").addClass("layui-bg-black");
@@ -68,10 +68,10 @@ layui.use(['layer','element'],function(){
             $("#li_home").removeClass("layui-this");
             $("#li_more").removeClass("layui-this");
             $("#li_about").addClass("layui-this");
-            $("#page_home").hide("slow");
-            $("#page_time").hide("slow");
-            $("#page_history").hide("slow");
-            $("#page_about").show("slow");
+            $("#page_home").hide();
+            $("#page_time").hide();
+            $("#page_history").hide();
+            $("#page_about").show();
             $("body").css("background-color","#FFFFFF");
         });
     });
