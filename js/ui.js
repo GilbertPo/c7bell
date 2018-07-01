@@ -21,6 +21,8 @@ layui.use(['layer','element'],function(){
                 $("#page_history").hide("slow");
                 $("#page_about").hide("slow");
                 $("#page_home").show("slow");
+                $("#home_title").css("top",($(window).height()-$("#home_title").height())/2);
+                $("#home_title").css("left",($(window).width()-$("#home_title").width())/2);
             });
             $("#link_time").click(function(){
                 layer.msg($("#link_time").text());
