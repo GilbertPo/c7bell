@@ -18,13 +18,13 @@ layui.use(['layer','element'],function(){
                 $("#li_more").removeClass("layui-this");
                 $("#li_about").removeClass("layui-this");
                 $("#li_home").addClass("layui-this");
-                $("body").css("background-color","#000000");
                 $("#page_time").hide("slow");
                 $("#page_history").hide("slow");
                 $("#page_about").hide("slow");
                 $("#page_home").show("slow");
                 $("#home_title").css("top",($(window).height()-$("#home_title").height())/2);
                 $("#home_title").css("left",($(window).width()-$("#home_title").width())/2);
+                $("body").css("background-color","#000000");
             });
             $("#link_time").click(function(){
                 layer.msg($("#link_time").text());
@@ -36,11 +36,11 @@ layui.use(['layer','element'],function(){
                 $("#li_home").removeClass("layui-this");
                 $("#li_about").removeClass("layui-this");
                 $("#li_more").addClass("layui-this");
-                $("body").css("background-color","#FFFFFF");
                 $("#page_home").hide("slow");
                 $("#page_history").hide("slow");
                 $("#page_about").hide("slow");
                 $("#page_time").show("slow");
+                $("body").css("background-color","#FFFFFF");
             });
             $("#link_history").click(function(){
                 layer.msg($("#link_history").text());
@@ -52,11 +52,11 @@ layui.use(['layer','element'],function(){
                 $("#li_home").removeClass("layui-this");
                 $("#li_about").removeClass("layui-this");
                 $("#li_more").addClass("layui-this");
-                $("body").css("background-color","#FFFFFF");
                 $("#page_home").hide("slow");
                 $("#page_time").hide("slow");
                 $("#page_about").hide("slow");
                 $("#page_history").show("slow");
+                $("body").css("background-color","#FFFFFF");
             });
             $("#link_about").click(function(){
                 layer.msg($("#link_about").text());
@@ -68,11 +68,11 @@ layui.use(['layer','element'],function(){
                 $("#li_home").removeClass("layui-this");
                 $("#li_more").removeClass("layui-this");
                 $("#li_about").addClass("layui-this");
-                $("body").css("background-color","#FFFFFF");
                 $("#page_home").hide("slow");
                 $("#page_time").hide("slow");
                 $("#page_history").hide("slow");
                 $("#page_about").show("slow");
+                $("body").css("background-color","#FFFFFF");
             });
         });
     });
