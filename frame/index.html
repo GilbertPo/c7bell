@@ -31,7 +31,20 @@
 <!--
 -->
 <div class="bodydiv">
-<iframe id="framecm" name="framecm" frameborder="0" scrolling="auto" src="https://c1707.applinzi.com" mce_src="https://c1707.applinzi.com"></iframe>
+<iframe id="frame" name="frame" frameborder="0" scrolling="auto"></iframe>
 </div>
+<script>
+	;!(function(){
+	var frame = document.getElementById("frame");
+	var str = location.href;
+	var num = str.indexOf("#");
+	var url = "https://c1707.applinzi.com/";
+	if(num > -1){
+		str = str.substr(num+1);
+		url += str;
+	}
+	frame.src = url;
+	});
+</script>
 </body>
 </html>
